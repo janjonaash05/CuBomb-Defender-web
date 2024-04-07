@@ -12,7 +12,7 @@
 
 
 let mechanic_index = 0;
-const mechanic_names = ["bomb", "turret_controls", "turrets", "slider_controls", "slider", "disruptor", "supernova", "core", "spinner", "grid", "tokens", "upgrade_station", "helper_station", "shield", "black_hole", "emp"];
+const mechanic_names = ["bomb", "turret_controls", "turrets", "slider_controls", "slider", "disruptor", "supernova", "shield","core", "spinner", "grid", "tokens", "upgrade_station", "helper_station",  "black_hole", "emp"];
 
 const mechanics_img = document.querySelector(".mechanics-img")
 
@@ -24,7 +24,7 @@ console.log(mechanic_names.length + " mechanics length");
 let mechanic_relations_map = new Map();
 
 
-mechanic_relations_map.set("bomb", ["core", "spinner", "shield"]);
+mechanic_relations_map.set("bomb", ["core", "spinner", "shield","turret_controls","turrets"]);
 mechanic_relations_map.set("turret_controls", ["turrets", "bomb"]);
 mechanic_relations_map.set("turrets", ["core", "bomb", "spinner"]);
 mechanic_relations_map.set("slider_controls", ["slider"]);
@@ -47,8 +47,22 @@ mechanic_relations_map.set("emp", ["disruptor", "supernova"]);
 let mechanic_description_map = new Map();
 
 
-mechanic_description_map.set("bomb","Enemy object, floating towards the player's Shield. Can be one of the 8 colors")
-
+mechanic_description_map.set("bomb", ["Bomb", "bomb"]);
+mechanic_description_map.set("turret_controls", ["Turret Controls", "turret-controls"]);
+mechanic_description_map.set("turrets", ["Turrets","turrets"]);
+mechanic_description_map.set("slider_controls", ["Slider Controls","slider-controls"]);
+mechanic_description_map.set("slider", ["Slider", "slider"]);
+mechanic_description_map.set("supernova", ["Supernova", "supernova"]);
+mechanic_description_map.set("disruptor", ["Disruptor","disruptor"]);
+mechanic_description_map.set("core", ["Core","core"]);
+mechanic_description_map.set("spinner", ["Spinner","spinner"]);
+mechanic_description_map.set("grid", ["Bomb Grid","grid"]);
+mechanic_description_map.set("tokens", ["Tokens", "tokens"]);
+mechanic_description_map.set("upgrade_station", ["Upgrade Station", "upgrade-station"]);
+mechanic_description_map.set("helper_station", ["Helper Station", "helper-station"]);
+mechanic_description_map.set("shield", ["Shield", "shield"]);
+mechanic_description_map.set("black_hole", ["Black Hole", "black-hole"]);
+mechanic_description_map.set("emp", ["EMP", "emp"]);
 
 
 
@@ -61,6 +75,38 @@ let mechanic_element_map = new Map();
 
 
 
+
+
+const mechanics_header_box = document.querySelector(".mechanics-header-box");
+
+
+switchDescriptions("bomb");
+function switchDescriptions(feature_name)
+{
+
+    const all_descs = document.querySelectorAll(".mechanics-list-item");
+    all_descs.forEach(x=> x.classList.add("hide-class"));
+
+
+    mechanics_header_box.innerHTML = mechanic_description_map.get(feature_name)[0];
+
+
+
+    const to_show_desc_class = ".mechanic-desc-"+mechanic_description_map.get(feature_name)[1];
+
+    const to_show_descs = document.querySelectorAll(to_show_desc_class);
+
+    to_show_descs.forEach(x => x.classList.remove("hide-class"));
+
+
+
+
+
+      
+
+
+
+}
 
 
 
@@ -122,6 +168,7 @@ function nextMechanic(direction) {
 
 
     showRelations(mechanic_name);
+    switchDescriptions(mechanic_name);
 
 
 
