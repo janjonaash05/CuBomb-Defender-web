@@ -2,7 +2,7 @@
 
 
 
-@media only screen and (max-width: 600px)  
+@media only screen and (max-width: 1000px)  
 {
 
 
@@ -26,7 +26,8 @@
     .section-header
     {
         width: 75%;
-        font-size: 1.2em;
+        font-size: 1.5em;
+        margin: 20px auto;
 
     }
 
@@ -43,28 +44,31 @@
 
     .technologies-container
     {
+        margin: 0;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
         align-content: center;
 
-        background-color: aquamarine;
+     
     }
 
 
     .technologies-box
     {
-        margin: 50px auto;
+        margin: 0 auto;
+
         width: 17vw;
         height: 17vw;
     }
 
     .technologies-header-box
     {
-        margin: 0;
+        margin: 25px auto;
+        margin-top: 0;
         width: 15vw;
         font-size: 0.75em ;
 
-        background-color: azure;
+       
     }
 
 
@@ -75,5 +79,12 @@
 
     }
 
+
+
+    footer
+    {
+        position: fixed;
+        bottom: 0;
+    }
     
 }
