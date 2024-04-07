@@ -12,7 +12,7 @@
 
 
 let mechanic_index = 0;
-const mechanic_names = ["bomb", "turret_controls", "turrets", "slider_controls", "slider", "disruptor", "supernova", "shield","core", "spinner", "grid", "tokens", "upgrade_station", "helper_station",  "black_hole", "emp"];
+const mechanic_names = ["bomb", "turret_controls", "turrets", "slider_controls", "slider", "disruptor", "supernova", "shield","core", "spinner", "harpoon", "tokens","token_transporters", "grid", "upgrade_station", "helper_station",  "black_hole", "emp"];
 
 const mechanics_img = document.querySelector(".mechanics-img")
 
@@ -35,6 +35,8 @@ mechanic_relations_map.set("core", []);
 mechanic_relations_map.set("spinner", []);
 mechanic_relations_map.set("grid", ["bomb"]);
 mechanic_relations_map.set("tokens", ["grid", "upgrade_station", "helper_station"]);
+mechanic_relations_map.set("token_transporters", ["tokens"]);
+mechanic_relations_map.set("harpoon", ["tokens"]);
 mechanic_relations_map.set("upgrade_station", ["turrets", "slider", "slider_controls", "shield"]);
 mechanic_relations_map.set("helper_station", ["emp", "black_hole"]);
 mechanic_relations_map.set("shield", ["core", "spinner"]);
@@ -58,6 +60,8 @@ mechanic_description_map.set("core", ["Core","core"]);
 mechanic_description_map.set("spinner", ["Spinner","spinner"]);
 mechanic_description_map.set("grid", ["Bomb Grid","grid"]);
 mechanic_description_map.set("tokens", ["Tokens", "tokens"]);
+mechanic_description_map.set("token_transporters", ["Token Transporters", "token-transporters"]);
+mechanic_description_map.set("harpoon", ["Harpoon","harpoon"]);
 mechanic_description_map.set("upgrade_station", ["Upgrade Station", "upgrade-station"]);
 mechanic_description_map.set("helper_station", ["Helper Station", "helper-station"]);
 mechanic_description_map.set("shield", ["Shield", "shield"]);
