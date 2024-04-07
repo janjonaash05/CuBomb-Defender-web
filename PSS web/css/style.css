@@ -76,23 +76,26 @@ header {
 .header-text {
 
 
-    height: 100%;
+    height: auto;
 
     width: 100%;
 
-    font-size: 0.75em;
-    text-align: center;
-    display: grid;
-    place-items: center;
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-
+    
     background-color: var(--primary);
     color: var(--text);
     border-bottom: 5px solid var(--secondary);
 
 
-    padding: 60px;
-    font-size: 5vw;
+    padding-top: 35px;
+    padding-bottom: 20px;
+ 
+    font-size: 4em
 
 }
 
@@ -161,7 +164,7 @@ a:active {
 
 
 
-section {}
+
 
 .about-box {
     width: 50vw;
@@ -173,7 +176,7 @@ section {}
     padding: 20px;
 
     font-size: 2em;
-
+    line-height: 1.6;
 
 
 
@@ -253,7 +256,7 @@ section {}
 
     border-bottom: 5px dashed var(--text);
 
-    font-size: 1.9em;
+    font-size: 1.7em;
 
     width: 10vw;
     height: 5vw;
@@ -374,8 +377,54 @@ section {}
 {
     display: grid;
 
+    margin: 60px;
     grid-template-columns: repeat(8, 1fr);
-    column-gap: 15px;
+    row-gap: 30px;
+
+
+
+}
+
+
+.mechanics-listed-img
+{
+    width: 120px;
+    height: 120px;
+
+    justify-self: center;
+
+
+    border: var(--box-border-width) solid var(--text);
+    border-radius: 15px;
+
+}
+
+
+
+
+.mechanics-header-box
+{
+    height: fit-content;
+    width: fit-content;
+    padding: 20px;    
+    margin: 20px auto;
+    color: var(--text);
+    font-size: 4em;
+}
+
+.mechanics-info-box
+{
+    width: 850px;
+    height: fit-content;
+
+    padding: 20px;
+    color: var(--text);
+
+
+    text-align: center;
+    font-size: 3em;
+
+    margin: 20px auto;
 
 }
 
@@ -385,6 +434,30 @@ section {}
 
 
 
+
+
+
+
+footer
+{
+
+    margin-top: 50px;
+    width: 100%;
+    height: 60px;
+
+    background-color: var(--primary);
+    color: var(--text);
+
+
+
+    border-top: var(--box-border-width) solid var(--secondary);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
 
 
 .background-blue {
@@ -467,47 +540,89 @@ section {}
     color: var(--text);
 }
 
-
-
+.arrow:hover
+{
+    border: var(--box-border-width) solid var(--text); 
+    box-shadow: 0px 0px 25px 6px var(--text);
+    cursor:pointer;
+}
 
 
 
 
 
 .glow-blue {
-    box-shadow: 0px 0px 127px 6px var(--blue);
+    box-shadow: 0px 0px 50px 6px var(--blue);
 }
 
 .glow-cyan {
-    box-shadow: 0px 0px 127px 6px var(--cyan);
+    box-shadow: 0px 0px 50px 6px var(--cyan);
 }
 
 .glow-teal {
-    box-shadow: 0px 0px 127px 6px var(--teal);
+    box-shadow: 0px 0px 50px 6px var(--teal);
 }
 
 .glow-green {
-    box-shadow: 0px 0px 127px 6px var(--green);
+    box-shadow: 0px 0px 50px 6px var(--green);
 }
 
 .glow-yellow {
-    box-shadow: 0px 0px 127px 6px var(--yellow);
+    box-shadow: 0px 0px 50px 6px var(--yellow);
 }
 
 .glow-orange {
-    box-shadow: 0px 0px 127px 6px var(--orange);
+    box-shadow: 0px 0px 50px 6px var(--orange);
 }
 
 .glow-red {
-    box-shadow: 0px 0px 127px 6px var(--red);
+    box-shadow: 0px 0px 50px 6px var(--red);
 }
 
 .glow-magenta {
-    box-shadow: 0px 0px 127px 6px var(--magenta);
+    box-shadow: 0px 0px 50px 6px var(--magenta);
 }
 
-.glow-white {
-    box-shadow: 0px 0px 127px 6px white;
+.glow-text {
+    box-shadow: 0px 0px 25px 6px var(--text);
+}
+
+
+
+.glow-small-blue {
+    box-shadow: 0px 0px 25px 6px var(--blue);
+}
+
+.glow-small-cyan {
+    box-shadow: 0px 0px 25px 6px var(--cyan);
+}
+
+.glow-small-teal {
+    box-shadow: 0px 0px 25px 6px var(--teal);
+}
+
+.glow-small-green {
+    box-shadow: 0px 0px 25px 6px var(--green);
+}
+
+.glow-small-yellow {
+    box-shadow: 0px 0px 25px 6px var(--yellow);
+}
+
+.glow-small-orange {
+    box-shadow: 0px 0px 25px 6px var(--orange);
+}
+
+.glow-small-red {
+    box-shadow: 0px 0px 25px 6px var(--red);
+}
+
+.glow-small-magenta {
+    box-shadow: 0px 0px 25px 6px var(--magenta);
+}
+
+.glow-small-text {
+    box-shadow: 0px 0px 25px 6px var(--text);
 }
 
 
@@ -552,4 +667,11 @@ section {}
 
 .outline-white {
     border: var(--box-border-width) solid white;
+}
+
+
+
+.outline-text
+{
+    border: var(--box-border-width) solid var(--text); 
 }

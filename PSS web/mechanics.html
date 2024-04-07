@@ -63,33 +63,38 @@
 
             <div class="mechanics-section-scroll-container">
 
-                <div class="arrow"><img class="arrow-img" src="img/arrow_left.png" alt="" onclick="nextFeature('left')"></div>
+                <div class="arrow"><img class="arrow-img" src="img/arrow_left.png" alt="" onclick="nextMechanic('left')"></div>
 
                 <div class="box mechanics-box glow-target glow-blue">
-                    <img class="mechanics-img outline-target" src="img/features/bomb.png" alt="">
+                    <img class="mechanics-img outline-target" src="img/mechanics/bomb.png" alt="">
                 </div>
     
-                <div class="arrow"><img class="arrow-img"  src="img/arrow_right.png" alt="" onclick="nextFeature('right')"></div>
+                <div class="arrow"><img class="arrow-img"  src="img/arrow_right.png" alt="" onclick="nextMechanic('right')" onmouseenter=""></div>
 
 
             </div>
 
 
-            <div class="mechanics-listed-container">
-
-                <img class="mechanics-listed-img" alt="">
-
-            </div>
-
-    
-
-
-
+            <div class="mechanics-listed-container"></div>
 
 
         </section>
 
         <section>
+            <p class="section-header">
+                Description
+            </p>
+
+            <div class="mechanics-header-box box">
+                Bomb
+            </div>
+
+            <div class="mechanics-info-box box">
+                Enemy object, floating towards the player's Shield. Can be one of the 8 colors
+            </div>
+
+
+
 
         </section>
 
@@ -98,12 +103,12 @@
 
 
     </main>
-    <footer></footer>
+    <footer>&copy; Jan Jonáš 2024, email: janjonaash05@gmail.com</footer>
 
 
 
-    <script src="js/app.js"></script>
-    <script src="js/featureSwap.js"></script>
+    <script src="js/color_name.js"></script>
+    <script src="js/mechanic_swap.js"></script>
     
 </body>
 </html>

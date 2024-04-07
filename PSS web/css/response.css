@@ -23,6 +23,48 @@
 
     }
 
+    .section-header
+    {
+        width: 75%;
+        font-size: 1.2em;
+
+    }
+
+
+    .about-box
+    {
+        width: 85%;
+        height: fit-content;
+        font-size: 1em;
+        gap: 20px;
+
+    }
+
+
+    .technologies-container
+    {
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+
+        background-color: aquamarine;
+    }
+
+
+    .technologies-box
+    {
+        margin: 50px auto;
+        width: 17vw;
+        height: 17vw;
+    }
+
+    .technologies-header-box
+    {
+        margin: 0;
+        width: 15vw;
+        font-size: 0.75em ;
+    }
+
 
     
 }
