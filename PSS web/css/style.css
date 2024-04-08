@@ -570,7 +570,15 @@ footer
 {
   
     text-shadow: var(--text) 0px 0px 18px;
+    cursor: pointer;
 
+}
+
+
+.click-target
+{
+
+    cursor: pointer;
 }
 
 .arrow:hover
@@ -707,6 +715,7 @@ footer
 .outline-text
 {
     border: var(--box-border-width) solid var(--text); 
+    
 }
 
 

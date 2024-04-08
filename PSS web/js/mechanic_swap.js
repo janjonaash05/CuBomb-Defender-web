@@ -18,7 +18,7 @@ const mechanics_img = document.querySelector(".mechanics-img")
 
 
 
-console.log(mechanic_names.length + " mechanics length");
+
 
 
 let mechanic_relations_map = new Map();
@@ -31,7 +31,7 @@ mechanic_relations_map.set("slider_controls", ["slider"]);
 mechanic_relations_map.set("slider", ["supernova", "disruptor"]);
 mechanic_relations_map.set("supernova", ["core", "spinner"]);
 mechanic_relations_map.set("disruptor", ["turret_controls"]);
-mechanic_relations_map.set("core", []);
+mechanic_relations_map.set("core", ["shield"]);
 mechanic_relations_map.set("spinner", []);
 mechanic_relations_map.set("grid", ["bomb"]);
 mechanic_relations_map.set("tokens", ["grid", "upgrade_station", "helper_station"]);
@@ -92,7 +92,7 @@ function switchDescriptions(feature_name)
     all_descs.forEach(x=> x.classList.add("hide-class"));
 
 
-    mechanics_header_box.innerHTML = mechanic_description_map.get(feature_name)[0];
+    mechanics_header_box.innerHTML =  "<span class='color-text-glow''>"+mechanic_description_map.get(feature_name)[0]+"</span>";
 
 
 
@@ -122,6 +122,8 @@ function generateListedmechanics() {
         const listed = document.createElement("img");
         listed.setAttribute("src", getPath(x));
         listed.classList.add("mechanics-listed-img");
+        listed.classList.add("click-target");
+        listed.classList.add("click-target-"+ x.replace("_","-"));
 
 
         mechanic_element_map.set(x, listed);
@@ -143,20 +145,19 @@ generateListedmechanics();
 
 function nextMechanic(direction) {
 
-    console.log(mechanic_index + " index before");
+    
 
 
-    mechanic_index += (direction == "right") ? 1 : -1;
+    mechanic_index += direction;
 
 
 
     if (mechanic_index == mechanic_names.length) {
         mechanic_index = 0;
-        console.log("upper limit");
     }
     else if (mechanic_index == -1) {
         mechanic_index = mechanic_names.length - 1;
-        console.log("lower limit");
+       
     }
 
 
@@ -211,7 +212,6 @@ function showRelations(mechanic_name)
         );
     }
 
-    console.log(affected_mechanics.length + " mechanics");
 
     affected_mechanics.forEach(x => { x.setAttribute("class", "mechanics-listed-img glow-text")});
     
@@ -236,7 +236,78 @@ function showRelations(mechanic_name)
 
 
 
-    console.log(mechanic_name + " mechanics index");
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const clickables = document.querySelectorAll(".click-target");
+
+
+
+
+
+clickables.forEach( x=> 
+    {
+
+
+
+        
+        
+       let target_mechanic = Array.from(x.classList).find(word => word.includes("click-target-")).replace("click-target-","").replace("-","_");
+        console.log(target_mechanic + " mechanic from filter");
+
+
+        
+        x.onclick = function() 
+        {
+            switchToDirectMechanic(target_mechanic);
+
+        };
+         
+
+
+
+    }  );
+
+
+function switchToDirectMechanic(mechanic_name)
+{
+
+
+    console.log(mechanic_name + " onclick target_mechanic");
+
+    target_index = mechanic_names.indexOf(mechanic_name);
+
+
+    console.log(target_index + " target index");
+
+
+    index_delta = target_index - mechanic_index;
+
+    
+
+
+    nextMechanic(index_delta);
+    showRelations(mechanic_name);
+    switchDescriptions(mechanic_name);
+
+
+
+
+
 
 }
 
