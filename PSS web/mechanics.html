@@ -156,17 +156,72 @@
                     <p class="mechanics-list-item mechanic-desc-core">- Core - Provides energy to the <span class="color-text-glow click-target click-target-shield">Shield's</span> Adapter based on its health</p>
                     <p class="mechanics-list-item mechanic-desc-core">- Core - 6 stages of health, 17 health points </p>
                     <p class="mechanics-list-item mechanic-desc-core">- Core - Health can be replenished by manually shooting <span class="color-text-glow click-target click-target-bomb">Bombs</span> with a <span class="color-text-glow click-target click-target-turrets">Turret</span> </p>
-                    <p class="mechanics-list-item mechanic-desc-core">- Core Ring - Displays health by colored segements</p>
+                    <p class="mechanics-list-item mechanic-desc-core">- Core Ring - Displays health by colored segments</p>
 
                     <p class="mechanics-list-item mechanic-desc-spinner">- Enemy object</p>
                     <p class="mechanics-list-item mechanic-desc-spinner">- Increases its charge-up value with each damage to the <span class="color-text-glow click-target click-target-core">Core</span></p>
                     <p class="mechanics-list-item mechanic-desc-spinner">- After <span class="color-text-glow click-target click-target-core">Core</span> death, it begins a charge-up process that causes a <b>GAME OVER</b> when finished </p>
-                    <p class="mechanics-list-item mechanic-desc-spinner">- This can be prevented by manually shooting a manually shooting <span class="color-text-glow click-target click-target-bomb">Bomb</span> with a <span class="color-text-glow click-target click-target-turrets">Turret</span></p>
+                    <p class="mechanics-list-item mechanic-desc-spinner">- This can be prevented by manually shooting a <span class="color-text-glow click-target click-target-bomb">Bomb</span> with a <span class="color-text-glow click-target click-target-turrets">Turret</span></p>
+
+                    <p class="mechanics-list-item mechanic-desc-harpoon">- Friendly object</p>
+                    <p class="mechanics-list-item mechanic-desc-harpoon">- When on, click to launch it towards the center of <span class="color-text-glow click-target click-target-token-transporters">Token Transporters</span> </p>
+                    <p class="mechanics-list-item mechanic-desc-harpoon">- Can grab <span class="color-text-glow click-target click-target-tokens">Tokens</span></p>
+                    <p class="mechanics-list-item mechanic-desc-harpoon">- If a <span class="color-text-glow click-target click-target-tokens">Token</span> isn't caught, it can be launched after a delay</p>
+                    
+                    <p class="mechanics-list-item mechanic-desc-tokens">- Friendly and Enemy objects</p>
+                    <p class="mechanics-list-item mechanic-desc-tokens">- Currency for the <span class="color-text-glow click-target click-target-upgrade-station">Upgrade Station</span> and <span class="color-text-glow click-target click-target-helper-station">Helper Station</span>  </p>
+                    <p class="mechanics-list-item mechanic-desc-tokens">- 4 HP</p>
+                    <p class="mechanics-list-item mechanic-desc-tokens">- Move between the center and <span class="color-text-glow click-target click-target-token-transporters">Token Transporters</span></p>
+                    <p class="mechanics-list-item mechanic-desc-tokens">- Loses 1 HP when entering <span class="color-text-glow click-target click-target-token-transporters">Token Transporters</span>  </p>
+                    <p class="mechanics-list-item mechanic-desc-tokens">- Different behaviour for catches and death:  </p>
+                    <p class="mechanics-list-item mechanic-desc-tokens">- Friendly - adds 1 to the Token Counter when caught, nothing when destroyed  </p>
+                    <p class="mechanics-list-item mechanic-desc-tokens">- Enemy - increases Score when caught, buffs a certain enemy mechanic when destroyed:  </p>
+                    <p class="mechanics-list-item mechanic-desc-tokens">- - <span class="color-text-glow click-target click-target-token-transporters">Disruptor</span> movement speed</p>
+                    <p class="mechanics-list-item mechanic-desc-tokens">- - <span class="color-text-glow click-target click-target-token-supernova">Supernova</span> max Stars amount</p>
+                    <p class="mechanics-list-item mechanic-desc-tokens">- - Convert a <span class="color-text-glow click-target click-target-grid">Bomb Grid</span> Placeholder unit into a Spawner unit (4 Tokens for 1 conversion) </p>
+                    
+                    <p class="mechanics-list-item mechanic-desc-token-transporters">- Neutral objects</p>
+                    <p class="mechanics-list-item mechanic-desc-token-transporters">- Spawn and relocate <span class="color-text-glow click-target click-target-tokens">Tokens</span></p>
+                    <p class="mechanics-list-item mechanic-desc-token-transporters">- When a <span class="color-text-glow click-target click-target-tokens">Token</span> enters, it may be relocated to another Transporter</p>
+                    <p class="mechanics-list-item mechanic-desc-token-transporters">- Relocated <span class="color-text-glow click-target click-target-tokens">Tokens</span> head towards the center, then another Transporter </p>
+           
+                    <p class="mechanics-list-item mechanic-desc-grid">- A set of Enemy objects</p>
+                    <p class="mechanics-list-item mechanic-desc-grid">- Each unit can either be a Placeholder or a Spawner</p>
+                    <p class="mechanics-list-item mechanic-desc-grid">- Spawners spawn <span class="color-text-glow click-target click-target-bomb">Bombs</span> in set intervals (decreased with time)</p>
+                    <p class="mechanics-list-item mechanic-desc-grid">- Placeholders can be replaced by Spawners with Enemy <span class="color-text-glow click-target click-target-tokens">Tokens</span></p>
+           
+                    <p class="mechanics-list-item mechanic-desc-upgrade-station">- Friendly object</p>
+                    <p class="mechanics-list-item mechanic-desc-upgrade-station">- Can be used to Upgrade certain mechanics:</p>
+                    <p class="mechanics-list-item mechanic-desc-upgrade-station">- - <span class="color-text-glow click-target click-target-turret">Turret</span> capacity</p>
+                    <p class="mechanics-list-item mechanic-desc-upgrade-station">- - <span class="color-text-glow click-target click-target-turret">Turret</span> recharge speed</p>
+                    <p class="mechanics-list-item mechanic-desc-upgrade-station">- - <span class="color-text-glow click-target click-target-slider">Slider</span> recharge speed</p>
+                    <p class="mechanics-list-item mechanic-desc-upgrade-station">- - <span class="color-text-glow click-target click-target-turret">Slider</span> projectile speed</p>
+                    <p class="mechanics-list-item mechanic-desc-upgrade-station">- Use arrows to navigate selection and click on the Upgrade icon to proceed</p>
+                    <p class="mechanics-list-item mechanic-desc-upgrade-station">- Each Upgrade has up to 4 degrees</p>
+                    <p class="mechanics-list-item mechanic-desc-upgrade-station">- When a mechanic is fully Upgrade, <span class="color-text-glow click-target click-target-shield">Shield</span> Storage capacity increases</p>
+                    <p class="mechanics-list-item mechanic-desc-upgrade-station">- Each degree costs 1 <span class="color-text-glow click-target click-target-tokens">Token</span></p>
+           
+                    <p class="mechanics-list-item mechanic-desc-helper-station">- Friendly object</p>
+                    <p class="mechanics-list-item mechanic-desc-helper-station">- Can be used to spawn Helpers: <span class="color-text-glow click-target click-target-black-hole">Black Hole</span> or <span class="color-text-glow click-target click-target-emp">EMP</span> </p>
+                    <p class="mechanics-list-item mechanic-desc-helper-station">- Use arrows to navigate selection and click on the Helper icon to proceed</p>
+                    <p class="mechanics-list-item mechanic-desc-helper-station">- Each Helper spawned costs 4 <span class="color-text-glow click-target click-target-tokens">Tokens</span> </p>
+                    <p class="mechanics-list-item mechanic-desc-helper-station">- Can have both active at once</p>
+
+                    <p class="mechanics-list-item mechanic-desc-black-hole">- Friendly object</p>
+                    <p class="mechanics-list-item mechanic-desc-black-hole">- Sucks up all <span class="color-text-glow click-target click-target-bomb">Bombs</span> and prevents them from spawning</p>
+                    <p class="mechanics-list-item mechanic-desc-black-hole">- Lasts for 4 seconds</p>
+                    
+
+                    <p class="mechanics-list-item mechanic-desc-emp">- Friendly object</p>
+                    <p class="mechanics-list-item mechanic-desc-emp">- Slowly destroys and disables spawning for every <span class="color-text-glow click-target click-target-disruptor">Disruptor</span>, <span class="color-text-glow click-target click-target-supernova">Star</span> and <span class="color-text-glow click-target click-target-supernova">Supernova</span> </p>
+                    <p class="mechanics-list-item mechanic-desc-emp">- Lasts for 4 seconds</p>
 
 
 
-               
-            </div>
+
+
+
+                </div>  
 
 
 
