@@ -98,8 +98,8 @@
                     <p class="mechanics-list-item mechanic-desc-bomb">- Can be one of the 8 colors</p>
                     <p class="mechanics-list-item mechanic-desc-bomb">- Can be shot down manually or automatically (via <span class="color-text-glow click-target click-target-turret-controls">Turret Control</span>) </p>
                     <p class="mechanics-list-item mechanic-desc-bomb">- Player must have the correct colors set on their <span class="color-text-glow click-target click-target-turrets">Turrets</span></p>
-                    <p class="mechanics-list-item mechanic-desc-bomb">- If not shot down in time, 1 <span class="color-text-glow click-target click-target-shield">Shield</span> charge gets removed</p>
-                    <p class="mechanics-list-item mechanic-desc-bomb">- If <span class="color-text-glow click-target click-target-shield">Shield</span> is depleted, <span class="color-text-glow click-target click-target-core">Core</span> takes a hit and <span class="color-text-glow click-target click-target-spinner">Spinner's</span> value increases by 1</p>
+                    <p class="mechanics-list-item mechanic-desc-bomb">- If not shot down in time, removes either 1 <span class="color-text-glow click-target click-target-shield">Shield</span> charge or deals 1 damage to the <span class="color-text-glow click-target click-target-core">Core</span></p>
+                    
                 
                     <p class="mechanics-list-item mechanic-desc-turret-controls">- Stationary Friendly objects</p>
                     <p class="mechanics-list-item mechanic-desc-turret-controls">- Each one corresponds to 1 <span class="color-text-glow click-target click-target-turrets">Turret</span> and has 2 functions:</p>
@@ -109,8 +109,8 @@
                     <p class="mechanics-list-item mechanic-desc-turrets">- Stationary Friendly objects</p>
                     <p class="mechanics-list-item mechanic-desc-turrets">- Each one can have 1 of 4 colors (according to the <span class="color-text-glow click-target click-target-turret-controls">Turret Control</span>)</p>
                     <p class="mechanics-list-item mechanic-desc-turrets">- Manually shoot down <span class="color-text-glow click-target click-target-bomb">Bombs</span> by clicking on them
-                    <p class="mechanics-list-item mechanic-desc-turrets">- Each manually shot down <span class="color-text-glow click-target click-target-bomb">Bomb</span> heals the <span class="color-text-glow click-target click-target-core">Core</span> and decreases the value of the <span class="color-text-glow click-target click-target-spinner">Spinner</span> both by 1</p>
-                    <p class="mechanics-list-item mechanic-desc-turrets">- Each automatic use from <span class="color-text-glow click-target click-target-turret-controls">Turret Control</span> removes one charge
+                    <p class="mechanics-list-item mechanic-desc-turrets">- Each manually shot down <span class="color-text-glow click-target click-target-bomb">Bomb</span> heals the <span class="color-text-glow click-target click-target-core">Core</span></p>
+                    <p class="mechanics-list-item mechanic-desc-turrets">- Each automatic use from <span class="color-text-glow click-target click-target-turret-controls">Turret Control</span> removes one charge </p>
                     <p class="mechanics-list-item mechanic-desc-turrets">- If all charges are depleted, they recharge back over time</p>
                     <p class="mechanics-list-item mechanic-desc-turrets">- Automatic use is disabled while recharging</p>
                     
@@ -134,14 +134,32 @@
                     <p class="mechanics-list-item mechanic-desc-disruptor">- If all bars are colored, it aims at <span class="color-text-glow click-target click-target-turret-controls">Turret Controls</span> and launches its projectiles</p>
                     <p class="mechanics-list-item mechanic-desc-disruptor">- If not destroyed before they reach <span class="color-text-glow click-target click-target-turret-controls">Turret Controls</span>, they disable them and <span class="color-text-glow click-target click-target-turrets">Turrets</span> for a set time </p>
                     
-                    <p class="mechanics-list-item mechanic-desc-supernova">- Enemy objects: Stars and Supernova</p>
-                    <p class="mechanics-list-item mechanic-desc-supernova">- Target for <span class="color-text-glow click-target click-target-slider-controls">Slider</span>: destroyed in 1 shot from Bolt and multiple shots from Full-Auto </p>
-                    <p class="mechanics-list-item mechanic-desc-supernova">- Rises up and begins charge-up process</p>
-                    <p class="mechanics-list-item mechanic-desc-supernova">- During charge-up, it moves around and adds color bars</p>
-                    <p class="mechanics-list-item mechanic-desc-supernova">- If all bars are colored, it aims at <span class="color-text-glow click-target click-target-turret-controls">Turret Controls</span> and launches its projectiles</p>
-                    <p class="mechanics-list-item mechanic-desc-supernova">- If not destroyed before they reach <span class="color-text-glow click-target click-target-turret-controls">Turret Controls</span>, they disable them and <span class="color-text-glow click-target click-target-turrets">Turrets</span> for a set time </p>
+                    <p class="mechanics-list-item mechanic-desc-supernova">- Enemy objects</p>
+                    <p class="mechanics-list-item mechanic-desc-supernova">- Stars - 1-8 at a time</p>
+                    <p class="mechanics-list-item mechanic-desc-supernova">- Stars - Target for <span class="color-text-glow click-target click-target-slider-controls">Slider</span>: destroyed in 1 shot from both Bolt and Full-Auto </p>
+                    <p class="mechanics-list-item mechanic-desc-supernova">- Stars - Emerge, then begin charge-up process</p>
+                    <p class="mechanics-list-item mechanic-desc-supernova">- Stars - After charge-up, they fall towards a certain point</p>
+                    <p class="mechanics-list-item mechanic-desc-supernova">- Supernova - Grows from each fallen Star</p>
+                    <p class="mechanics-list-item mechanic-desc-supernova">- Supernova - After all Stars fall, it begins charging-up by adding all fallen Star colors </p>
+                    <p class="mechanics-list-item mechanic-desc-supernova">- Supernova - When charged-up, it directly blasts the <span class="color-text-glow click-target click-target-core">Core</span> with lasers, 1 damage per Star fallen</p>
                     
+                    <p class="mechanics-list-item mechanic-desc-shield">- Friendly object</p>
+                    <p class="mechanics-list-item mechanic-desc-shield">- Consists of 3 parts: Emitter, Storage, Adapter</p>
+                    <p class="mechanics-list-item mechanic-desc-shield">- Emitter - Emits shield and blocks incoming <span class="color-text-glow click-target click-target-bomb">Bombs</span> from damaging the <span class="color-text-glow click-target click-target-core">Core</span></p>
+                    <p class="mechanics-list-item mechanic-desc-shield">- Storage - Stores shield charges, each hit blocked removes one charge</p>
+                    <p class="mechanics-list-item mechanic-desc-shield">- Storage - If all charges are depleted, they recharge over time and all damage goes to the <span class="color-text-glow click-target click-target-core">Core</span> </p>
+                    <p class="mechanics-list-item mechanic-desc-shield">- Adapter - Adapts energy from the <span class="color-text-glow click-target click-target-core">Core</span> into Storage recharge speed  </p>
 
+                    <p class="mechanics-list-item mechanic-desc-core">- Friendly object</p>
+                    <p class="mechanics-list-item mechanic-desc-core">- Consists of 2 parts: Core and Core Ring</p>
+                    <p class="mechanics-list-item mechanic-desc-core">- Core - Provides energy to the <span class="color-text-glow click-target click-target-shield">Shield's</span> Adapter based on its health</p>
+                    <p class="mechanics-list-item mechanic-desc-core">- Core - 6 stages of health, 17 health points </p>
+                    <p class="mechanics-list-item mechanic-desc-core">- Core - Health can be replenished by manually shooting <span class="color-text-glow click-target click-target-bomb">Bombs</span> with a <span class="color-text-glow click-target click-target-turrets">Turret</span> </p>
+                    <p class="mechanics-list-item mechanic-desc-core">- Core Ring - Displays health by colored segements</p>
+
+                    <p class="mechanics-list-item mechanic-desc-spinner">- Enemy object</p>
+                    <p class="mechanics-list-item mechanic-desc-spinner">- Increases its charge-up value with each damage to the <span class="color-text-glow click-target click-target-bomb">Core</span></p>
+                    <p class="mechanics-list-item mechanic-desc-spinner">- After fully </p>
 
 
 

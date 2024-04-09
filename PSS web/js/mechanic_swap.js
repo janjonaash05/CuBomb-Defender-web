@@ -54,7 +54,7 @@ mechanic_description_map.set("turret_controls", ["Turret Controls", "turret-cont
 mechanic_description_map.set("turrets", ["Turrets","turrets"]);
 mechanic_description_map.set("slider_controls", ["Slider Controls","slider-controls"]);
 mechanic_description_map.set("slider", ["Slider", "slider"]);
-mechanic_description_map.set("supernova", ["Supernova", "supernova"]);
+mechanic_description_map.set("supernova", ["Stars & Supernova", "supernova"]);
 mechanic_description_map.set("disruptor", ["Disruptor","disruptor"]);
 mechanic_description_map.set("core", ["Core","core"]);
 mechanic_description_map.set("spinner", ["Spinner","spinner"]);
@@ -84,7 +84,67 @@ let mechanic_element_map = new Map();
 const mechanics_header_box = document.querySelector(".mechanics-header-box");
 
 
-switchDescriptions("bomb");
+
+
+
+
+function Init()
+{
+    generateListedmechanics();
+
+  
+
+
+
+    addClicksToClickables();
+
+
+
+
+    showRelations("bomb");
+    switchDescriptions("bomb");
+
+    
+
+}
+
+Init();
+
+
+
+
+
+
+function addClicksToClickables()
+{
+
+    const clickables = document.querySelectorAll(".click-target");
+
+
+clickables.forEach( x=> 
+    {
+
+
+
+        
+        
+       let target_mechanic = Array.from(x.classList).find(word => word.includes("click-target-")).replace("click-target-","").replace("-","_");
+        console.log(target_mechanic + " mechanic from filter");
+
+
+        
+        x.onclick = function() 
+        {
+            switchToDirectMechanic(target_mechanic);
+
+        };
+         
+
+
+
+    }  );
+}
+
 function switchDescriptions(feature_name)
 {
 
@@ -123,7 +183,7 @@ function generateListedmechanics() {
         listed.setAttribute("src", getPath(x));
         listed.classList.add("mechanics-listed-img");
         listed.classList.add("click-target");
-        listed.classList.add("click-target-"+ x.replace("_","-"));
+        listed.classList.add("click-target-"+ (x.includes("_") ? x.replace("_","-") : x));
 
 
         mechanic_element_map.set(x, listed);
@@ -138,7 +198,7 @@ function generateListedmechanics() {
 
 }
 
-generateListedmechanics();
+
 
 
 
@@ -188,7 +248,7 @@ function nextMechanic(direction) {
 
 
 
-showRelations("bomb");
+
 function showRelations(mechanic_name)
 {
 
@@ -198,7 +258,20 @@ function showRelations(mechanic_name)
 
 
     const all_mechanics = document.querySelectorAll(".mechanics-listed-img");
-    all_mechanics.forEach(x => { x.setAttribute("class","mechanics-listed-img outline-text")});
+    all_mechanics.forEach(x => 
+        {
+
+
+            let clickTargetClass = Array.from(x.classList).find(word => word.includes("click-target-"));
+
+
+             x.setAttribute("class","mechanics-listed-img outline-text click-target "+clickTargetClass);
+        }
+        );
+
+
+    //all_mechanics.forEach(x => { x.setAttribute("class","mechanics-listed-img outline-text")});
+
 
 
     let affected_mechanics = [];
@@ -213,7 +286,11 @@ function showRelations(mechanic_name)
     }
 
 
-    affected_mechanics.forEach(x => { x.setAttribute("class", "mechanics-listed-img glow-text")});
+    affected_mechanics.forEach(x =>
+         {
+            let clickTargetClass = Array.from(x.classList).find(word => word.includes("click-target-"));
+         x.setAttribute("class", "mechanics-listed-img glow-text click-target "+clickTargetClass);
+        });
     
 
 
@@ -253,34 +330,7 @@ function showRelations(mechanic_name)
 
 
 
-const clickables = document.querySelectorAll(".click-target");
 
-
-
-
-
-clickables.forEach( x=> 
-    {
-
-
-
-        
-        
-       let target_mechanic = Array.from(x.classList).find(word => word.includes("click-target-")).replace("click-target-","").replace("-","_");
-        console.log(target_mechanic + " mechanic from filter");
-
-
-        
-        x.onclick = function() 
-        {
-            switchToDirectMechanic(target_mechanic);
-
-        };
-         
-
-
-
-    }  );
 
 
 function switchToDirectMechanic(mechanic_name)
