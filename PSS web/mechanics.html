@@ -6,6 +6,7 @@
 
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/response.css">
     <link href="https://fonts.cdnfonts.com/css/tw-cen-classified-mt-std" rel="stylesheet">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -57,19 +58,19 @@
         <section>
 
             <p class="section-header">
-                Game Mechanics and Features
+                Game Mechanics
             </p>
 
 
             <div class="mechanics-section-scroll-container">
 
-                <div class="arrow"><img class="arrow-img" src="img/arrow_left.png" alt="" onclick="nextMechanic(-1)"></div>
+                <div class="arrow arrow-left"><img class="arrow-img" src="img/arrow_left.png" alt="" onclick="nextMechanic(-1)"></div>
 
                 <div class="box mechanics-box glow-target glow-blue">
                     <img class="mechanics-img outline-target" src="img/mechanics/bomb.png" alt="">
                 </div>
     
-                <div class="arrow"><img class="arrow-img"  src="img/arrow_right.png" alt="" onclick="nextMechanic(1)" onmouseenter=""></div>
+                <div class="arrow arrow-right"><img class="arrow-img"  src="img/arrow_right.png" alt="" onclick="nextMechanic(1)" onmouseenter=""></div>
 
 
             </div>
@@ -158,8 +159,9 @@
                     <p class="mechanics-list-item mechanic-desc-core">- Core Ring - Displays health by colored segements</p>
 
                     <p class="mechanics-list-item mechanic-desc-spinner">- Enemy object</p>
-                    <p class="mechanics-list-item mechanic-desc-spinner">- Increases its charge-up value with each damage to the <span class="color-text-glow click-target click-target-bomb">Core</span></p>
-                    <p class="mechanics-list-item mechanic-desc-spinner">- After fully </p>
+                    <p class="mechanics-list-item mechanic-desc-spinner">- Increases its charge-up value with each damage to the <span class="color-text-glow click-target click-target-core">Core</span></p>
+                    <p class="mechanics-list-item mechanic-desc-spinner">- After <span class="color-text-glow click-target click-target-core">Core</span> death, it begins a charge-up process that causes a <b>GAME OVER</b> by shooting the <span class="color-text-glow click-target click-target-core">Core</span> with a laser </p>
+                    <p class="mechanics-list-item mechanic-desc-spinner">- This can be prevented by</p>
 
 
 
